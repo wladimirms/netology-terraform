@@ -6,11 +6,13 @@ variable "token" {
 
 variable "cloud_id" {
   type        = string
+  default     = "b1g2iqndoeociiuop5ot"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/cloud/get-id"
 }
 
 variable "folder_id" {
   type        = string
+  default     = "b1gb5es4tqhi7j0ohvrq"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
 
@@ -36,6 +38,12 @@ variable "vpc_name" {
 
 variable "vms_ssh_root_key" {
   type        = string
-  default     = "<your_ssh_ed25519_key>"
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOwI59x236ai6Rr2usk6dZHhX0QZu2E9tQHZ2oZY/UdF vladimirmuravev@MacBook-Air-Vladimir.local"
+  description = "ssh-keygen -t ed25519"
+}
+
+variable "vms_ssh_public_root_key" {
+  type        = string
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOwI59x236ai6Rr2usk6dZHhX0QZu2E9tQHZ2oZY/UdF vladimirmuravev@MacBook-Air-Vladimir.local"
   description = "ssh-keygen -t ed25519"
 }
