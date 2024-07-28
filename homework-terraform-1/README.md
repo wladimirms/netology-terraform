@@ -84,5 +84,22 @@ tfsate до:
 
 # Задание 3
 
-1.Скачиваю на машину opentofu
+1.Скачиваю на машину последнюю версию opentofu 1.7.3:
+
+<img width="744" alt="Снимок экрана 2024-07-28 в 16 43 16" src="https://github.com/user-attachments/assets/fedc6e23-2873-4734-9ae2-7d5a59ff0769">
+
+<img width="538" alt="Снимок экрана 2024-07-28 в 16 43 37" src="https://github.com/user-attachments/assets/adf909f3-9ec0-4dee-8e53-c4f9795574f8">
+
+2.Создаю новую директорию для tofu и настраиваю ее, меняю версию на 1.7.3 в main.tf. Запускаю apply для проекта и убеждаюсь что контейнер создался.
+
+<img width="749" alt="Снимок экрана 2024-07-28 в 16 52 17" src="https://github.com/user-attachments/assets/e16e18d6-077b-45ee-8680-66930ee3c139">
+
+<img width="773" alt="Снимок экрана 2024-07-28 в 16 49 16" src="https://github.com/user-attachments/assets/f206e9ef-91ae-4cad-abb5-1b024acc0006">
+
+<img width="1207" alt="Снимок экрана 2024-07-28 в 16 54 12" src="https://github.com/user-attachments/assets/15277186-ca2c-4843-855c-5a3ab86b3e73">
+
+3. Уничтожаю проект tofu и проверяю docker:
+
+<img width="680" alt="Снимок экрана 2024-07-28 в 16 55 23" src="https://github.com/user-attachments/assets/5ca7f7be-e92e-4bef-96dd-35c690985eb7">
+
 
