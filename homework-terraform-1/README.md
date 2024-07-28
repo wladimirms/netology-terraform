@@ -74,4 +74,15 @@ tfsate до:
 
 <img width="497" alt="Снимок экрана 2024-07-28 в 15 25 10" src="https://github.com/user-attachments/assets/1b8529dd-4e25-4f4c-83a1-df7e35e2d287">
 
+8.Образ nginx не удален из-за параметра keep_locally = true:
+
+<img width="257" alt="Снимок экрана 2024-07-28 в 16 18 58" src="https://github.com/user-attachments/assets/6f91b701-698f-46fb-a21e-f94b49b21ebd">
+
+Об этом написано в документации:
+
+<img width="707" alt="Снимок экрана 2024-07-28 в 16 16 59" src="https://github.com/user-attachments/assets/53d99ca2-7fa2-4241-a1e1-664b9d68152e">
+
+# Задание 3
+
+1.Скачиваю на машину opentofu
 
