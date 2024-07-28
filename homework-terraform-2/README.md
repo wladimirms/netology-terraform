@@ -33,3 +33,17 @@
      Такие машины обойдутся дешевле. 
 
 # Задание 2
+
+1. Произвожу замену хардкода на переменные с префиксом и объявляю их в variables.tf
+
+<img width="955" alt="Снимок экрана 2024-07-28 в 21 10 11" src="https://github.com/user-attachments/assets/d832d2d5-0c4c-4bc4-9b56-045c8f5ba606">
+
+2. Использую terraform validate и plan. Результат положительный.
+
+<img width="711" alt="Снимок экрана 2024-07-28 в 21 14 11" src="https://github.com/user-attachments/assets/c5ee4278-88b8-438f-bb0f-17e27db78544">
+<img width="746" alt="Снимок экрана 2024-07-28 в 21 14 28" src="https://github.com/user-attachments/assets/44163dc6-a718-4216-8a4b-2cea15689bdc">
+
+# Задание 3
+
+
+
