@@ -59,5 +59,14 @@
 
 # Задание 4
 
+1.Создаю outputs.tf и создаю в нем output c информацией по ВМ с массивом из 1 значениея с двумя объектами:
 
+<img width="1114" alt="Снимок экрана 2024-07-29 в 22 38 58" src="https://github.com/user-attachments/assets/b7922d5d-3043-4c2c-bf28-8444e80e2192">
 
+2. Использую terraform refresh для получения outputs:
+
+<img width="1114" alt="Снимок экрана 2024-07-29 в 22 38 58" src="https://github.com/user-attachments/assets/f57ed3e6-6f81-4a97-900d-dbcdeafa6695">
+
+Значения по каждой машине отображаются в одном output
+
+# Задание 5
