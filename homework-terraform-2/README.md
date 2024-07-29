@@ -65,7 +65,7 @@
 
 2. Использую terraform refresh для получения outputs:
 
-<img width="1114" alt="Снимок экрана 2024-07-29 в 22 38 58" src="https://github.com/user-attachments/assets/f57ed3e6-6f81-4a97-900d-dbcdeafa6695">
+<img width="754" alt="Снимок экрана 2024-07-29 в 22 40 51" src="https://github.com/user-attachments/assets/c67e6fe4-76f0-4e4a-bb4f-07ed7aa2c4e9">
 
 Значения по каждой машине отображаются в одном output
 
