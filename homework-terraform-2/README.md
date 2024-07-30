@@ -93,10 +93,15 @@
 
 <img width="378" alt="Снимок экрана 2024-07-30 в 21 59 53" src="https://github.com/user-attachments/assets/dede1a49-d894-4288-a634-77b71ab945b7">
 
+2.Создаю новую переменную metadata
+
+<img width="506" alt="Снимок экрана 2024-07-30 в 22 28 13" src="https://github.com/user-attachments/assets/2f8b04bb-8d5b-45f5-90a9-3ec3fa726471">
+
 2. Применяю новые пути переменных в main.tf
 
 <img width="1150" alt="Снимок экрана 2024-07-30 в 22 03 00" src="https://github.com/user-attachments/assets/4694d7ea-5e2c-4336-94eb-cbdbe8d6abcd">
 
+<img width="1165" alt="Снимок экрана 2024-07-30 в 22 33 16" src="https://github.com/user-attachments/assets/95a60e97-0beb-4ce2-95e0-21b2ebccefdd">
 
 3.Запускаю terraform plan. Никаких изменений нет, кроме памяти для ВМ c БД - меняется с 2х на 4Гб, так как раньше я установил значение 2 и создавал машины с этим старым параметром.
 
