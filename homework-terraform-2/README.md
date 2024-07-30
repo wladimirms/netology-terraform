@@ -70,3 +70,24 @@
 Значения по каждой машине отображаются в одном output
 
 # Задание 5
+
+1.Создаю одну locals переменную locals.tf по примеру из лекции для двух ВМ: 
+
+<img width="687" alt="Снимок экрана 2024-07-30 в 21 17 33" src="https://github.com/user-attachments/assets/0e8ab0c3-716d-4266-9e05-3eb0432e743a">
+
+2.Добавляю новые переменные env, platform и role в vms_platform.tf
+
+<img width="302" alt="Снимок экрана 2024-07-30 в 21 19 04" src="https://github.com/user-attachments/assets/74da0e78-8ba2-4c96-9b1a-4fa9ab5b8928">
+
+3. Изменяю ресурсы ВМ с переменной local:
+
+<img width="1124" alt="Снимок экрана 2024-07-30 в 21 22 15" src="https://github.com/user-attachments/assets/f79bb3e8-5fe1-4297-953b-8518d14ca234">
+
+4. Применяю изменения. Terraform plan изменился в соответствии с новыми значениями переменных:
+
+<img width="961" alt="Снимок экрана 2024-07-30 в 21 24 06" src="https://github.com/user-attachments/assets/bdb447de-59cb-45f8-af07-a6dba5dc4ccf">
+
+# Задание 6
+
+
+
