@@ -89,5 +89,19 @@
 
 # Задание 6
 
+1. Создаю переменную vms_resources с типом map(object). Все ненужные переменные не комментирую, а удаляю.
+
+<img width="378" alt="Снимок экрана 2024-07-30 в 21 59 53" src="https://github.com/user-attachments/assets/dede1a49-d894-4288-a634-77b71ab945b7">
+
+2. Применяю новые пути переменных в main.tf
+
+<img width="1195" alt="Снимок экрана 2024-07-17 в 20 25 34" src="https://github.com/user-attachments/assets/18e3e783-207a-4acd-8e88-bbbb30a3f5be">
+
+3.Запускаю terraform plan. Никаких изменений нет, кроме памяти для ВМ c БД - меняется с 2х на 4Гб, так как раньше я установил значение 2 и создавал машины с этим старым параметром.
+
+<img width="916" alt="Снимок экрана 2024-07-30 в 22 04 31" src="https://github.com/user-attachments/assets/670022d7-43d8-47f3-9392-6c586b9ee3bd">
+
+
+
 
 
