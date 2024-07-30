@@ -57,17 +57,3 @@ variable "vpc_name_b" {
   default     = "develop-b"
   description = "VPC network & subnet name"
 }
-
-###ssh vars
-
-variable "vms_ssh_root_key" {
-  type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOwI59x236ai6Rr2usk6dZHhX0QZu2E9tQHZ2oZY/UdF vladimirmuravev@MacBook-Air-Vladimir.local"
-  description = "ssh-keygen -t ed25519"
-}
-
-variable "vms_ssh_public_root_key" {
-  type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOwI59x236ai6Rr2usk6dZHhX0QZu2E9tQHZ2oZY/UdF vladimirmuravev@MacBook-Air-Vladimir.local"
-  description = "ssh-keygen -t ed25519"
-}
