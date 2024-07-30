@@ -95,7 +95,8 @@
 
 2. Применяю новые пути переменных в main.tf
 
-<img width="976" alt="Снимок экрана 2024-07-17 в 20 58 48" src="https://github.com/user-attachments/assets/2a6e638c-51f3-418b-855e-ed42fb98f1ed">
+<img width="1150" alt="Снимок экрана 2024-07-30 в 22 03 00" src="https://github.com/user-attachments/assets/4694d7ea-5e2c-4336-94eb-cbdbe8d6abcd">
+
 
 3.Запускаю terraform plan. Никаких изменений нет, кроме памяти для ВМ c БД - меняется с 2х на 4Гб, так как раньше я установил значение 2 и создавал машины с этим старым параметром.
 
