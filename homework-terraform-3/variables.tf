@@ -55,7 +55,7 @@ variable "vm_web_platform_id" {
 
 variable "storage" {
   type        = string
-  default     = "storage"
+  default     = "netology-develop-platform-storage"
   description = "storage name"
 }
 
@@ -79,6 +79,13 @@ variable "vms_resources" {
       memory=2
       core_fraction=5
       hdd_size=10
+      hdd_type="network-hdd"
+    }
+    storage = {
+      cores=2
+      memory=1
+      core_fraction=5
+      hdd_size=5
       hdd_type="network-hdd"
     }
   }

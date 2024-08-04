@@ -11,15 +11,16 @@ resource "yandex_compute_instance" "storage" {
     yandex_compute_disk.hdd-disk
   ]
   resources {
-    cores         = 2
-    memory        = 1
-    core_fraction = 5
+    cores         = var.vms_resources.storage.cores
+    memory        = var.vms_resources.storage.memory
+    core_fraction = var.vms_resources.storage.core_fraction
   }
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
     }
   }
+
   dynamic "secondary_disk" {
     for_each = "${yandex_compute_disk.hdd-disk.*.id}"
     content {
