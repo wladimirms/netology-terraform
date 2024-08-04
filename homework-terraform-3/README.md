@@ -65,6 +65,38 @@
 
 # Задание 4
 
+1.Провожу создание inventory в файле ansible.tf c тремя группами ВМ:
+
+<img width="500" alt="Снимок экрана 2024-08-04 в 18 42 25" src="https://github.com/user-attachments/assets/cdd17e18-c9e4-4a77-960e-1eb74f8180dd">
+
+2.Создаю щаблон tftpl и добавляю переменную fqdn auto:
+
+<img width="747" alt="Снимок экрана 2024-08-04 в 18 44 27" src="https://github.com/user-attachments/assets/97730f7e-76c6-44b6-b569-a50770fa295f">
+
+3. Устанавливаю провайдер hashicorp/local для работы с templatefile:
+
+<img width="566" alt="Снимок экрана 2024-08-04 в 18 46 52" src="https://github.com/user-attachments/assets/9471688e-2adb-4ebc-823a-1a37fb5f811a">
+<img width="566" alt="Снимок экрана 2024-08-04 в 18 47 14" src="https://github.com/user-attachments/assets/a8cefa36-6e6c-4c99-a872-9bc80d808fe8">
+
+4.Применяю код. Создаю заново все ресурсы.
+
+<img width="699" alt="Снимок экрана 2024-08-04 в 18 50 12" src="https://github.com/user-attachments/assets/cefafc71-33b2-4447-9ee2-ef4c03ed50c8">
+
+Проверяю ЛК:
+
+<img width="1382" alt="Снимок экрана 2024-08-04 в 18 34 17" src="https://github.com/user-attachments/assets/6aa05886-5988-4474-8d4d-833aacd47179">
+<img width="1382" alt="Снимок экрана 2024-08-04 в 18 35 16" src="https://github.com/user-attachments/assets/26b68ae6-a3ea-4bb3-8703-43ba6a8f2c72">
+
+Итоговый файл inventory:
+
+<img width="816" alt="Снимок экрана 2024-08-04 в 18 26 13" src="https://github.com/user-attachments/assets/779855be-e23b-463c-ae05-fc0094c8b70b">
+
+
+
+
+
+
+
 
 
 
