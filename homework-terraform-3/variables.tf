@@ -36,6 +36,11 @@ variable "instances" {
   default     = ["1", "2",]
 }
 
+variable "storages" {
+  type        = list(string)
+  default     = ["1", "2", "3"]
+}
+
 variable "vm_family" {
   type        = string
   default     = "ubuntu-2004-lts"
@@ -46,6 +51,12 @@ variable "vm_web_platform_id" {
   type        = string
   default     = "standard-v2"
   description = "platform id"
+}
+
+variable "storage" {
+  type        = string
+  default     = "storage"
+  description = "storage name"
 }
 
 variable "security_group_id" {
@@ -86,32 +97,15 @@ variable "each_vm" {
       vm_name = "main",
       cpu = 2,
       ram = 2,
-      disk_volume = 1
+      disk_volume = 10
       core_fraction = 5
     },
     {
       vm_name = "replica",
       cpu = 2,
       ram = 4,
-      disk_volume = 2
+      disk_volume = 12
       core_fraction = 5
     }
   ]   
-}
-
-locals {
-  id_rsa_key = file("~/.ssh/id_rsa.pub")
-}
-
-variable "metadata" {
-  type=map(object({
-    serial-port-enable = number
-    ssh-keys = string
-  }))
-  default = {
-    develop = {
-      serial-port-enable = 1
-      ssh-keys = local.id_rsa_key
-    }
-  }
 }

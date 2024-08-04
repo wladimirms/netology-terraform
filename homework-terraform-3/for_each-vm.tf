@@ -11,6 +11,8 @@ resource "yandex_compute_instance" "db" {
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
+      type = "network-hdd"
+      size = "${each.value.disk_volume}"
     }
   }
   scheduling_policy {
@@ -22,8 +24,7 @@ resource "yandex_compute_instance" "db" {
   }
 
   metadata = {
-    serial-port-enable = var.metadata.develop.serial-port-enable
-    ssh-keys           = var.metadata.develop.ssh-keys
+    serial-port-enable = local.serial_port_enable
+    ssh-keys           = local.id_rsa_key
   }
-
 }

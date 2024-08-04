@@ -26,8 +26,7 @@ resource "yandex_compute_instance" "web" {
   }
 
   metadata = {
-    serial-port-enable = var.metadata.develop.serial-port-enable
-    ssh-keys           = var.metadata.develop.ssh-keys
+    serial-port-enable = local.serial_port_enable
+    ssh-keys           = local.id_rsa_key
   }
-
 }
