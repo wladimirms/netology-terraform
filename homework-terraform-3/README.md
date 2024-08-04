@@ -60,7 +60,7 @@
 4. Запускаю plan. Создается ресурс storage и три виртуальных диска:
 
 <img width="631" alt="Снимок экрана 2024-08-04 в 15 28 47" src="https://github.com/user-attachments/assets/ece6e35d-ddd9-4c54-9212-abc358432443">
-<img width="990" alt="Снимок экрана 2024-08-04 в 15 29 30" src="https://github.com/user-attachments/assets/ea49289a-0cb2-4151-9c5c-ba6f37d1461a">
+<img width="1004" alt="Снимок экрана 2024-08-04 в 15 34 55" src="https://github.com/user-attachments/assets/f1cbb88a-a1a6-49ba-82a5-90883551df91">
 <img width="580" alt="Снимок экрана 2024-08-04 в 15 29 50" src="https://github.com/user-attachments/assets/46106f34-ba2a-4a38-ba10-28af990133a4">
 
 # Задание 4
