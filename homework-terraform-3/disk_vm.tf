@@ -21,10 +21,18 @@ resource "yandex_compute_instance" "storage" {
     }
   }
 
-  dynamic "secondary_disk" {
+/*   dynamic "secondary_disk" {
     for_each = "${yandex_compute_disk.hdd-disk.*.id}"
     content {
  	    disk_id = yandex_compute_disk.hdd-disk["${secondary_disk.key}"].id
+    }
+  } */
+
+  dynamic "secondary_disk" {
+    for_each = yandex_compute_disk.hdd-disk[*]
+    content {
+      disk_id = secondary_disk.value.id
+      auto_delete = true
     }
   }
 
