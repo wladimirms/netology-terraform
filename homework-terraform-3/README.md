@@ -55,7 +55,7 @@
 
 3. Использую блок dynamic secondary_disk, где итерируюсь по создающимся дискам с целью подключения к storage:
 
-<img width="546" alt="Снимок экрана 2024-08-04 в 15 24 56" src="https://github.com/user-attachments/assets/f42948c9-fca9-4e54-b3f0-f4cdd1cbb442">
+<img width="370" alt="Снимок экрана 2024-08-06 в 21 26 40" src="https://github.com/user-attachments/assets/dacf62dc-7ace-49cd-8340-c3302caf5448">
 
 4. Запускаю plan. Создается ресурс storage и три виртуальных диска:
 
