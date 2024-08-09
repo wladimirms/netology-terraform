@@ -31,7 +31,7 @@ module "vms-hw4" {
 }
 
 data template_file "userdata" {
-  template = file("${path.module}/cloud-init.yml")
+  template = templatefile("${path.module}/cloud-init.yml")
 
   vars = {
     ssh_pub_key = file("~/.ssh/id_ed25519.pub")
