@@ -39,14 +39,33 @@
 
 2. Передаю в модуль 3 переменные для сети:
 
-<img width="399" alt="Снимок экрана 2024-08-09 в 18 55 29" src="https://github.com/user-attachments/assets/9fa70d57-5368-48ad-a996-177233a16e75">
+<img width="363" alt="Снимок экрана 2024-08-11 в 16 47 41" src="https://github.com/user-attachments/assets/7db35ab7-b4cf-4f6d-a0fa-24826d226792">
+
 
 2. Создаю outputs с передачей переменных в рут-компонент:
 
 <img width="389" alt="Снимок экрана 2024-08-09 в 18 56 50" src="https://github.com/user-attachments/assets/5e88d829-cd5b-48e8-a32c-5ad0297aa0f3">
 
-3. Добавляю через -upgrade новый модуль
+3.Скриншот информации из terraform console:
+
+<img width="295" alt="Снимок экрана 2024-08-11 в 16 36 32" src="https://github.com/user-attachments/assets/21945b2d-637b-4ef5-a719-239ef5b961e2">
+
+4.Заменяю настройки сети модулем vpc:
+
+<img width="785" alt="Снимок экрана 2024-08-11 в 16 45 27" src="https://github.com/user-attachments/assets/ef2f2ef7-0683-487a-bf65-70dfb5b63f16">
+
+5. Добавляю через -upgrade новый модуль vpc:
 
 <img width="682" alt="Снимок экрана 2024-08-11 в 15 10 06" src="https://github.com/user-attachments/assets/9453c90e-6bff-4869-b8c3-cee812591426">
 
+6. Устанавливаю terraform docs через brew:
 
+<img width="675" alt="Снимок экрана 2024-08-11 в 16 53 51" src="https://github.com/user-attachments/assets/d6f0b50a-8b44-47c9-89d8-d648f3b7abe2">
+
+7. Создаю документацию через terraform docs: 
+
+<img width="1020" alt="Снимок экрана 2024-08-11 в 16 54 56" src="https://github.com/user-attachments/assets/b6367bc6-d184-4247-8889-993bbf1fdaeb">
+
+# Задание 3
+
+1.
