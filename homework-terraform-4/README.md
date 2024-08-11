@@ -34,42 +34,46 @@
 
 1. Создаю локальный модуль vpc, который будет создавать 2 ресурса: одну сеть и одну подсеть в зоне:
 
-<img width="471" alt="Снимок экрана 2024-08-09 в 18 52 48" src="https://github.com/user-attachments/assets/fee31663-6c65-4e39-8a6a-92ecbbd686e1">
+<img width="438" alt="Снимок экрана 2024-08-11 в 18 23 21" src="https://github.com/user-attachments/assets/f387a5e3-250b-4cb3-976c-77db34d01b93">
 <img width="168" alt="Снимок экрана 2024-08-09 в 18 52 58" src="https://github.com/user-attachments/assets/848f5e1e-5f09-4fb1-b716-58124a088e47">
 
 2. Передаю в модуль 3 переменные для сети:
 
-<img width="363" alt="Снимок экрана 2024-08-11 в 16 47 41" src="https://github.com/user-attachments/assets/7db35ab7-b4cf-4f6d-a0fa-24826d226792">
+<img width="357" alt="Снимок экрана 2024-08-11 в 18 23 58" src="https://github.com/user-attachments/assets/bf879009-aaf4-44e8-8e63-240ec6ee7db3">
 
+3. Создаю outputs с передачей переменных в рут-компонент:
 
-2. Создаю outputs с передачей переменных в рут-компонент:
+<img width="357" alt="Снимок экрана 2024-08-11 в 18 23 58" src="https://github.com/user-attachments/assets/5b49b207-3e76-4cf6-a701-438aed0b0b2a">
 
-<img width="389" alt="Снимок экрана 2024-08-09 в 18 56 50" src="https://github.com/user-attachments/assets/5e88d829-cd5b-48e8-a32c-5ad0297aa0f3">
-
-3.Скриншот информации из terraform console:
+4.Скриншот информации о модуле vpc из terraform console:
 
 <img width="295" alt="Снимок экрана 2024-08-11 в 16 36 32" src="https://github.com/user-attachments/assets/21945b2d-637b-4ef5-a719-239ef5b961e2">
 
-4.Заменяю настройки сети модулем vpc:
+5.Заменяю настройки сети модулем vpc:
 
-<img width="785" alt="Снимок экрана 2024-08-11 в 16 45 27" src="https://github.com/user-attachments/assets/ef2f2ef7-0683-487a-bf65-70dfb5b63f16">
+<img width="800" alt="Снимок экрана 2024-08-11 в 18 26 18" src="https://github.com/user-attachments/assets/961b822a-a2d4-4e70-822d-5d06c4e1e4d7">
 
-5. Добавляю через -upgrade новый модуль vpc:
+6. Добавляю через -upgrade новый модуль vpc:
 
 <img width="682" alt="Снимок экрана 2024-08-11 в 15 10 06" src="https://github.com/user-attachments/assets/9453c90e-6bff-4869-b8c3-cee812591426">
 
-6. Устанавливаю terraform docs через brew:
+7. Устанавливаю terraform docs через brew:
 
 <img width="675" alt="Снимок экрана 2024-08-11 в 16 53 51" src="https://github.com/user-attachments/assets/d6f0b50a-8b44-47c9-89d8-d648f3b7abe2">
 
-7. Создаю документацию через terraform docs: 
+8. Создаю документацию через terraform docs: 
 
-<img width="1020" alt="Снимок экрана 2024-08-11 в 16 54 56" src="https://github.com/user-attachments/assets/b6367bc6-d184-4247-8889-993bbf1fdaeb">
+<img width="995" alt="Снимок экрана 2024-08-11 в 18 29 27" src="https://github.com/user-attachments/assets/ffa2df51-9fb5-496f-8b32-7a06c55419c3">
 
 # Задание 3
 
 1. Вывожу список terraform state list:
 
 
-2. Удаляю
-3. 
+2. Удаляю модуль vpc:
+
+  
+3. Удаляю модуль с vm:
+
+
+4. Импортирую модули обратно: 
