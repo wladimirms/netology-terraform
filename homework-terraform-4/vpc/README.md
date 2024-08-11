@@ -16,18 +16,18 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                        | Type     |
-| --------------------------------------------------------------------------------------------------------------------------- | -------- |
-| [yandex_vpc_network.develop](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_network) | resource |
-| [yandex_vpc_subnet.develop](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet)   | resource |
+| Name                                                                                                                         | Type     |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [yandex_vpc_network.vpc_dev](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_network)  | resource |
+| [yandex_vpc_subnet.subnet_dev](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet) | resource |
 
 ## Inputs
 
-| Name                                                                  | Description  | Type           | Default                  | Required |
-| --------------------------------------------------------------------- | ------------ | -------------- | ------------------------ | :------: |
-| <a name="input_default_cidr"></a> [default_cidr](#input_default_cidr) | default_cidr | `list(string)` | <pre>[<br> ""<br>]</pre> |    no    |
-| <a name="input_default_zone"></a> [default_zone](#input_default_zone) | default_zone | `string`       | `""`                     |    no    |
-| <a name="input_vpc_name"></a> [vpc_name](#input_vpc_name)             | VPC name     | `string`       | `""`                     |    no    |
+| Name                                                      | Description  | Type     | Default | Required |
+| --------------------------------------------------------- | ------------ | -------- | ------- | :------: |
+| <a name="input_cidr"></a> [cidr](#input_cidr)             | CIDR         | `string` | n/a     |   yes    |
+| <a name="input_env_name"></a> [env_name](#input_env_name) | env_name     | `string` | n/a     |   yes    |
+| <a name="input_zone"></a> [zone](#input_zone)             | default zone | `string` | n/a     |   yes    |
 
 ## Outputs
 

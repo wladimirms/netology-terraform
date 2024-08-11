@@ -10,7 +10,7 @@ module "vms-hw4" {
   env_name               = var.env_name
   network_id             = module.vpc_dev.network_id
   subnet_zones           = [var.default_zone]
-  subnet_ids             = [ module.vpc_dev.subnet_id ]
+  subnet_ids             = [module.vpc_dev.subnet_id]
   instance_count         = 2
   image_family           = var.vm_family
   instance_core_fraction = var.core_fraction

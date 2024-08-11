@@ -1,17 +1,14 @@
-variable "vpc_name" {
+variable "env_name" {
   type        = string
-  default     = ""
-  description = "VPC name"
+  description = "env_name"
 }
 
-variable "default_zone" {
+variable "zone" {
   type        = string
-  default     = ""
-  description = "default_zone"
+  description = "default zone"
 }
 
-variable "default_cidr" {
+variable "cidr" {
   type        = string
-  default     = ""
-  description = "default_cidr"
+  description = "CIDR"
 }
