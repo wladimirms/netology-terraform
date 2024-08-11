@@ -1,17 +1,17 @@
 variable "vpc_name" {
-  type = string
+  type        = string
   default     = ""
-  description = "VPC network&subnet name"
+  description = "VPC name"
 }
 
 variable "default_zone" {
   type        = string
   default     = ""
-  description = "default zone"
+  description = "default_zone"
 }
 
 variable "default_cidr" {
-  type        = list(string)
-  default     = [""]
+  type        = string
+  default     = ""
   description = "default_cidr"
 }
