@@ -43,7 +43,7 @@
 
 3. Создаю outputs с передачей переменных в рут-компонент:
 
-<img width="357" alt="Снимок экрана 2024-08-11 в 18 23 58" src="https://github.com/user-attachments/assets/5b49b207-3e76-4cf6-a701-438aed0b0b2a">
+<img width="453" alt="Снимок экрана 2024-08-11 в 18 31 32" src="https://github.com/user-attachments/assets/78d5f8a1-0bde-4374-a916-6f75c07405f4">
 
 4.Скриншот информации о модуле vpc из terraform console:
 
