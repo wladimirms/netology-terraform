@@ -8,7 +8,7 @@
 
 2. Создаю вызов remote-модуля в main.tf и добавляю необходимые перемменные:
 
-<img width="732" alt="Снимок экрана 2024-08-09 в 18 28 02" src="https://github.com/user-attachments/assets/8d119d9e-7c54-4fd1-983a-9c788bf955c5">
+<img width="735" alt="Снимок экрана 2024-08-11 в 14 21 11" src="https://github.com/user-attachments/assets/c13e4d5d-c93e-4a16-8702-b78d7c442d19">
 <img width="358" alt="Снимок экрана 2024-08-09 в 18 29 37" src="https://github.com/user-attachments/assets/7c7817cb-2267-4301-bf34-b9c809a57ddf">
 
 3. В файле cloud-init добавляю установку nginx и передаю ssh-ключ в функцию template_file в блоке vars ={}
@@ -16,11 +16,19 @@
 <img width="389" alt="Снимок экрана 2024-08-09 в 18 36 40" src="https://github.com/user-attachments/assets/469ee491-18ff-436d-b2b5-377f5fdc4603">
 <img width="492" alt="Снимок экрана 2024-08-09 в 18 37 33" src="https://github.com/user-attachments/assets/32b67f8c-e70a-48cf-842a-6e0fa34f0808">
 
-4. Устанвливаю удаленный модуль и модуль для template
+4. Устанвливаю удаленный модуль и модуль для template. У меня macОС, поэтому использую стороннего поставщика модуля версии 2.2.0
 
 <img width="276" alt="Снимок экрана 2024-08-09 в 18 51 55" src="https://github.com/user-attachments/assets/08a9fa0f-27d1-450f-8314-6f5a3ae0105e">
+<img width="539" alt="Снимок экрана 2024-08-11 в 14 24 51" src="https://github.com/user-attachments/assets/a2937575-2312-49bb-9049-7054e739a5a8">
+<img width="317" alt="Снимок экрана 2024-08-11 в 14 25 09" src="https://github.com/user-attachments/assets/672a5913-c14a-4392-a8aa-ba8ec2ceb9d3">
 
-6. 
+6. Применяю код - скриншоты консоли YC и terraform console:
+
+<img width="789" alt="Снимок экрана 2024-08-11 в 14 38 24" src="https://github.com/user-attachments/assets/5fb71450-93ed-4df8-9a39-c2f0a6a5fbc2">
+<img width="821" alt="Снимок экрана 2024-08-11 в 14 38 08" src="https://github.com/user-attachments/assets/866d5446-0dd1-4aea-8f37-9f0161eab41a">
+<img width="342" alt="Снимок экрана 2024-08-11 в 14 36 50" src="https://github.com/user-attachments/assets/0aab2283-5c4d-469c-8d9a-89ca04db4aa0">
+<img width="356" alt="Снимок экрана 2024-08-11 в 14 36 13" src="https://github.com/user-attachments/assets/3e02b045-316d-4353-9061-ac12b576cd24">
+
 
 # Задание 2
 
