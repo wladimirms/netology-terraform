@@ -45,5 +45,8 @@
 
 <img width="389" alt="Снимок экрана 2024-08-09 в 18 56 50" src="https://github.com/user-attachments/assets/5e88d829-cd5b-48e8-a32c-5ad0297aa0f3">
 
-3.
+3. Добавляю через -upgrade новый модуль
+
+<img width="682" alt="Снимок экрана 2024-08-11 в 15 10 06" src="https://github.com/user-attachments/assets/9453c90e-6bff-4869-b8c3-cee812591426">
+
 
