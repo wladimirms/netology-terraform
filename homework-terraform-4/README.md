@@ -6,7 +6,7 @@
 
 <img width="1089" alt="Снимок экрана 2024-08-09 в 18 25 55" src="https://github.com/user-attachments/assets/8e2972a6-b371-4036-85f6-bdbb76f51893">
 
-2. Создаю вызов remote-модуля в main.tf и добавляю необходимые перемменные:
+2. Создаю вызовы remote-модуля в main.tf для analytics и marketing и добавляю необходимые перемменные:
 
 <img width="797" alt="Снимок экрана 2024-08-12 в 22 11 57" src="https://github.com/user-attachments/assets/98c0afe5-28a2-4c03-83d5-156335f70cf0">
 <img width="784" alt="Снимок экрана 2024-08-12 в 22 11 37" src="https://github.com/user-attachments/assets/787fe3eb-535b-4e74-ad70-e7359b541832">
