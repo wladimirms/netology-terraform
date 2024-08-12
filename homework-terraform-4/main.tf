@@ -17,10 +17,10 @@ module "vms-hw4" {
   preemptible            = true
   public_ip              = true
   
-  for_each = {for owner in var.each_owner: owner.vm_owner => owner}
+  for_each = var.each_owner
 
   labels = { 
-    owner = "${each.value.vm_owner}",
+    owner = "${each.value.vm_name}",
     org = "ooo_roga_and_coputa"
      }
 
@@ -38,6 +38,11 @@ data template_file "userdata" {
   }
 }
 
+/* variable "each_owner" {
+  type = list(string)
+  default =[ "marketing", "analytics"] 
+} */
+
 variable "each_owner" {
   type = list(object({
       vm_owner=string, 
@@ -45,5 +50,5 @@ variable "each_owner" {
   default = [
     {vm_owner = "marketing"},
     {vm_owner = "analytics"}
-  ]   
+  ]
 }
