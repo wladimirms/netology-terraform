@@ -20,7 +20,7 @@ module "vms-hw4" {
   for_each = var.each_owner
 
   labels = { 
-    owner = "${each.value.vm_name}",
+    owner = "${each.value}",
     org = "ooo_roga_and_coputa"
      }
 
@@ -38,17 +38,7 @@ data template_file "userdata" {
   }
 }
 
-/* variable "each_owner" {
+variable "each_owner" {
   type = list(string)
   default =[ "marketing", "analytics"] 
-} */
-
-variable "each_owner" {
-  type = list(object({
-      vm_owner=string, 
-      }))
-  default = [
-    {vm_owner = "marketing"},
-    {vm_owner = "analytics"}
-  ]
 }
