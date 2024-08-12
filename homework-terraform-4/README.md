@@ -82,5 +82,3 @@
 3. Удаляю модуль с vm:
 
 <img width="898" alt="Снимок экрана 2024-08-12 в 22 24 52" src="https://github.com/user-attachments/assets/c151afd9-55db-4362-a0fb-7bbfc1e5e2e5">
-
-4. Импортирую модули обратно: 
