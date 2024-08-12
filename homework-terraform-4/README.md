@@ -8,7 +8,8 @@
 
 2. Создаю вызов remote-модуля в main.tf и добавляю необходимые перемменные:
 
-<img width="735" alt="Снимок экрана 2024-08-11 в 14 21 11" src="https://github.com/user-attachments/assets/c13e4d5d-c93e-4a16-8702-b78d7c442d19">
+<img width="797" alt="Снимок экрана 2024-08-12 в 22 11 57" src="https://github.com/user-attachments/assets/98c0afe5-28a2-4c03-83d5-156335f70cf0">
+<img width="784" alt="Снимок экрана 2024-08-12 в 22 11 37" src="https://github.com/user-attachments/assets/787fe3eb-535b-4e74-ad70-e7359b541832">
 <img width="358" alt="Снимок экрана 2024-08-09 в 18 29 37" src="https://github.com/user-attachments/assets/7c7817cb-2267-4301-bf34-b9c809a57ddf">
 
 3. В файле cloud-init добавляю установку nginx и передаю ssh-ключ в функцию template_file в блоке vars ={}
