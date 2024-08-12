@@ -19,18 +19,18 @@
 
 4. Устанавливаю удаленный модуль и модуль для template. У меня macОС, поэтому использую стороннего поставщика модуля версии 2.2.0
 
-<img width="219" alt="Снимок экрана 2024-08-12 в 22 15 07" src="https://github.com/user-attachments/assets/ffb44ae8-db43-4ca3-acc8-7277dc4d7afd">
 <img width="539" alt="Снимок экрана 2024-08-11 в 14 24 51" src="https://github.com/user-attachments/assets/a2937575-2312-49bb-9049-7054e739a5a8">
+<img width="219" alt="Снимок экрана 2024-08-12 в 22 15 07" src="https://github.com/user-attachments/assets/ffb44ae8-db43-4ca3-acc8-7277dc4d7afd">
 <img width="317" alt="Снимок экрана 2024-08-11 в 14 25 09" src="https://github.com/user-attachments/assets/672a5913-c14a-4392-a8aa-ba8ec2ceb9d3">
 
-6. Применяю код - скриншоты консоли YC и terraform console:
+5. Применяю код - скриншоты консоли YC и terraform console:
 
 <img width="823" alt="Снимок экрана 2024-08-12 в 22 06 52" src="https://github.com/user-attachments/assets/36726487-7b9e-477c-9e97-133dee7599fe">
 <img width="832" alt="Снимок экрана 2024-08-12 в 22 06 37" src="https://github.com/user-attachments/assets/bbd0ee0e-ec67-414e-b614-d0fda91686dc">
-<img width="553" alt="Снимок экрана 2024-08-12 в 22 17 54" src="https://github.com/user-attachments/assets/dd9a9f62-f97e-4c76-a29d-319c7acc8052">
+<img width="362" alt="Снимок экрана 2024-08-12 в 22 20 49" src="https://github.com/user-attachments/assets/f72c830f-29b9-41ea-9fd6-084a82d5cef9">
 <img width="383" alt="Снимок экрана 2024-08-12 в 22 18 16" src="https://github.com/user-attachments/assets/976bfaf8-b601-44b0-bd36-e9340beb62f3">
 
-7.Подключаюсь к ВМ, проверяю конфиг nginx:
+6.Подключаюсь к ВМ, проверяю конфиг nginx:
 
 <img width="649" alt="Снимок экрана 2024-08-12 в 21 50 03" src="https://github.com/user-attachments/assets/096219c7-da98-421c-bfe1-58b32719027c">
 
@@ -73,11 +73,14 @@
 
 1. Вывожу список terraform state list:
 
+<img width="571" alt="Снимок экрана 2024-08-12 в 22 23 04" src="https://github.com/user-attachments/assets/9bab8557-3f56-4388-8450-35caf559ec60">
 
 2. Удаляю модуль vpc:
 
+<img width="848" alt="Снимок экрана 2024-08-12 в 22 23 58" src="https://github.com/user-attachments/assets/5d204eaa-c09b-4eb8-8eed-f115ec520b8a">
   
 3. Удаляю модуль с vm:
 
+<img width="898" alt="Снимок экрана 2024-08-12 в 22 24 52" src="https://github.com/user-attachments/assets/c151afd9-55db-4362-a0fb-7bbfc1e5e2e5">
 
 4. Импортирую модули обратно: 
