@@ -17,7 +17,7 @@ module "vms-hw4" {
   preemptible            = true
   public_ip              = true
   
-  for_each = var.each_owner
+  for_each = [for i in  var.each_owner: i]
 
   labels = { 
     owner = "${each.value}",
@@ -39,6 +39,6 @@ data template_file "userdata" {
 }
 
 variable "each_owner" {
-  type = list(string)
+  type = set(string)
   default =[ "marketing", "analytics"] 
 }
