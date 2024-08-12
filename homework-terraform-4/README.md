@@ -17,19 +17,22 @@
 <img width="389" alt="Снимок экрана 2024-08-09 в 18 36 40" src="https://github.com/user-attachments/assets/469ee491-18ff-436d-b2b5-377f5fdc4603">
 <img width="492" alt="Снимок экрана 2024-08-09 в 18 37 33" src="https://github.com/user-attachments/assets/32b67f8c-e70a-48cf-842a-6e0fa34f0808">
 
-4. Устанвливаю удаленный модуль и модуль для template. У меня macОС, поэтому использую стороннего поставщика модуля версии 2.2.0
+4. Устанавливаю удаленный модуль и модуль для template. У меня macОС, поэтому использую стороннего поставщика модуля версии 2.2.0
 
-<img width="276" alt="Снимок экрана 2024-08-09 в 18 51 55" src="https://github.com/user-attachments/assets/08a9fa0f-27d1-450f-8314-6f5a3ae0105e">
+<img width="219" alt="Снимок экрана 2024-08-12 в 22 15 07" src="https://github.com/user-attachments/assets/ffb44ae8-db43-4ca3-acc8-7277dc4d7afd">
 <img width="539" alt="Снимок экрана 2024-08-11 в 14 24 51" src="https://github.com/user-attachments/assets/a2937575-2312-49bb-9049-7054e739a5a8">
 <img width="317" alt="Снимок экрана 2024-08-11 в 14 25 09" src="https://github.com/user-attachments/assets/672a5913-c14a-4392-a8aa-ba8ec2ceb9d3">
 
 6. Применяю код - скриншоты консоли YC и terraform console:
 
-<img width="789" alt="Снимок экрана 2024-08-11 в 14 38 24" src="https://github.com/user-attachments/assets/5fb71450-93ed-4df8-9a39-c2f0a6a5fbc2">
-<img width="821" alt="Снимок экрана 2024-08-11 в 14 38 08" src="https://github.com/user-attachments/assets/866d5446-0dd1-4aea-8f37-9f0161eab41a">
-<img width="342" alt="Снимок экрана 2024-08-11 в 14 36 50" src="https://github.com/user-attachments/assets/0aab2283-5c4d-469c-8d9a-89ca04db4aa0">
-<img width="356" alt="Снимок экрана 2024-08-11 в 14 36 13" src="https://github.com/user-attachments/assets/3e02b045-316d-4353-9061-ac12b576cd24">
+<img width="823" alt="Снимок экрана 2024-08-12 в 22 06 52" src="https://github.com/user-attachments/assets/36726487-7b9e-477c-9e97-133dee7599fe">
+<img width="832" alt="Снимок экрана 2024-08-12 в 22 06 37" src="https://github.com/user-attachments/assets/bbd0ee0e-ec67-414e-b614-d0fda91686dc">
+<img width="553" alt="Снимок экрана 2024-08-12 в 22 17 54" src="https://github.com/user-attachments/assets/dd9a9f62-f97e-4c76-a29d-319c7acc8052">
+<img width="383" alt="Снимок экрана 2024-08-12 в 22 18 16" src="https://github.com/user-attachments/assets/976bfaf8-b601-44b0-bd36-e9340beb62f3">
 
+7.Подключаюсь к ВМ, проверяю конфиг nginx:
+
+<img width="649" alt="Снимок экрана 2024-08-12 в 21 50 03" src="https://github.com/user-attachments/assets/096219c7-da98-421c-bfe1-58b32719027c">
 
 # Задание 2
 
