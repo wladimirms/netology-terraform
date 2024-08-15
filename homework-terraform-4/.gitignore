@@ -4,6 +4,8 @@
 
 !.terraformrc
 
+tfplan.*
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
