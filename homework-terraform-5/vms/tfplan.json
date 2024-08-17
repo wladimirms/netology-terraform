@@ -1,0 +1,1939 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.8.4",
+  "variables": {
+    "public_key": {
+      "value": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar"
+    }
+  },
+  "planned_values": {
+    "outputs": {
+      "out": {
+        "sensitive": false
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "yandex_vpc_network.develop",
+          "mode": "managed",
+          "type": "yandex_vpc_network",
+          "name": "develop",
+          "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+          "schema_version": 0,
+          "values": {
+            "description": null,
+            "name": "develop",
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "labels": {},
+            "subnet_ids": []
+          }
+        },
+        {
+          "address": "yandex_vpc_subnet.develop_a",
+          "mode": "managed",
+          "type": "yandex_vpc_subnet",
+          "name": "develop_a",
+          "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+          "schema_version": 0,
+          "values": {
+            "description": null,
+            "dhcp_options": [],
+            "name": "develop-ru-central1-a",
+            "route_table_id": null,
+            "timeouts": null,
+            "v4_cidr_blocks": [
+              "10.0.1.0/24"
+            ],
+            "zone": "ru-central1-a"
+          },
+          "sensitive_values": {
+            "dhcp_options": [],
+            "labels": {},
+            "v4_cidr_blocks": [
+              false
+            ],
+            "v6_cidr_blocks": []
+          }
+        },
+        {
+          "address": "yandex_vpc_subnet.develop_b",
+          "mode": "managed",
+          "type": "yandex_vpc_subnet",
+          "name": "develop_b",
+          "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+          "schema_version": 0,
+          "values": {
+            "description": null,
+            "dhcp_options": [],
+            "name": "develop-ru-central1-b",
+            "route_table_id": null,
+            "timeouts": null,
+            "v4_cidr_blocks": [
+              "10.0.2.0/24"
+            ],
+            "zone": "ru-central1-b"
+          },
+          "sensitive_values": {
+            "dhcp_options": [],
+            "labels": {},
+            "v4_cidr_blocks": [
+              false
+            ],
+            "v6_cidr_blocks": []
+          }
+        }
+      ],
+      "child_modules": [
+        {
+          "resources": [
+            {
+              "address": "module.example-vm.yandex_compute_instance.vm[0]",
+              "mode": "managed",
+              "type": "yandex_compute_instance",
+              "name": "vm",
+              "index": 0,
+              "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+              "schema_version": 1,
+              "values": {
+                "allow_recreate": null,
+                "allow_stopping_for_update": true,
+                "boot_disk": [
+                  {
+                    "auto_delete": true,
+                    "initialize_params": [
+                      {
+                        "image_id": "fd805qs1mn3n0casp7lt",
+                        "size": 10,
+                        "type": "network-hdd"
+                      }
+                    ]
+                  }
+                ],
+                "description": "TODO: description; {{terraform managed}}",
+                "filesystem": [],
+                "hostname": "stage-web-stage-0",
+                "labels": {
+                  "env": "stage",
+                  "project": "undefined"
+                },
+                "local_disk": [],
+                "metadata": {
+                  "serial-port-enable": "1",
+                  "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+                },
+                "name": "stage-web-stage-0",
+                "network_acceleration_type": "standard",
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv4": true,
+                    "ipv6_dns_record": [],
+                    "nat": true,
+                    "nat_dns_record": []
+                  }
+                ],
+                "platform_id": "standard-v1",
+                "resources": [
+                  {
+                    "core_fraction": 5,
+                    "cores": 2,
+                    "gpus": null,
+                    "memory": 1
+                  }
+                ],
+                "scheduling_policy": [
+                  {
+                    "preemptible": true
+                  }
+                ],
+                "secondary_disk": [],
+                "timeouts": null,
+                "zone": "ru-central1-a"
+              },
+              "sensitive_values": {
+                "boot_disk": [
+                  {
+                    "initialize_params": [
+                      {}
+                    ]
+                  }
+                ],
+                "filesystem": [],
+                "labels": {},
+                "local_disk": [],
+                "metadata": {},
+                "metadata_options": [],
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv6_dns_record": [],
+                    "nat_dns_record": [],
+                    "security_group_ids": []
+                  }
+                ],
+                "placement_policy": [],
+                "resources": [
+                  {}
+                ],
+                "scheduling_policy": [
+                  {}
+                ],
+                "secondary_disk": []
+              }
+            }
+          ],
+          "address": "module.example-vm"
+        },
+        {
+          "resources": [
+            {
+              "address": "module.test-vm.yandex_compute_instance.vm[0]",
+              "mode": "managed",
+              "type": "yandex_compute_instance",
+              "name": "vm",
+              "index": 0,
+              "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+              "schema_version": 1,
+              "values": {
+                "allow_recreate": null,
+                "allow_stopping_for_update": true,
+                "boot_disk": [
+                  {
+                    "auto_delete": true,
+                    "initialize_params": [
+                      {
+                        "image_id": "fd805qs1mn3n0casp7lt",
+                        "size": 10,
+                        "type": "network-hdd"
+                      }
+                    ]
+                  }
+                ],
+                "description": "TODO: description; {{terraform managed}}",
+                "filesystem": [],
+                "hostname": "develop-webs-0",
+                "labels": {
+                  "owner": "i.ivanov",
+                  "project": "accounting"
+                },
+                "local_disk": [],
+                "metadata": {
+                  "serial-port-enable": "1",
+                  "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+                },
+                "name": "develop-webs-0",
+                "network_acceleration_type": "standard",
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv4": true,
+                    "ipv6_dns_record": [],
+                    "nat": true,
+                    "nat_dns_record": []
+                  }
+                ],
+                "platform_id": "standard-v1",
+                "resources": [
+                  {
+                    "core_fraction": 5,
+                    "cores": 2,
+                    "gpus": null,
+                    "memory": 1
+                  }
+                ],
+                "scheduling_policy": [
+                  {
+                    "preemptible": true
+                  }
+                ],
+                "secondary_disk": [],
+                "timeouts": null,
+                "zone": "ru-central1-a"
+              },
+              "sensitive_values": {
+                "boot_disk": [
+                  {
+                    "initialize_params": [
+                      {}
+                    ]
+                  }
+                ],
+                "filesystem": [],
+                "labels": {},
+                "local_disk": [],
+                "metadata": {},
+                "metadata_options": [],
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv6_dns_record": [],
+                    "nat_dns_record": [],
+                    "security_group_ids": []
+                  }
+                ],
+                "placement_policy": [],
+                "resources": [
+                  {}
+                ],
+                "scheduling_policy": [
+                  {}
+                ],
+                "secondary_disk": []
+              }
+            },
+            {
+              "address": "module.test-vm.yandex_compute_instance.vm[1]",
+              "mode": "managed",
+              "type": "yandex_compute_instance",
+              "name": "vm",
+              "index": 1,
+              "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+              "schema_version": 1,
+              "values": {
+                "allow_recreate": null,
+                "allow_stopping_for_update": true,
+                "boot_disk": [
+                  {
+                    "auto_delete": true,
+                    "initialize_params": [
+                      {
+                        "image_id": "fd805qs1mn3n0casp7lt",
+                        "size": 10,
+                        "type": "network-hdd"
+                      }
+                    ]
+                  }
+                ],
+                "description": "TODO: description; {{terraform managed}}",
+                "filesystem": [],
+                "hostname": "develop-webs-1",
+                "labels": {
+                  "owner": "i.ivanov",
+                  "project": "accounting"
+                },
+                "local_disk": [],
+                "metadata": {
+                  "serial-port-enable": "1",
+                  "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+                },
+                "name": "develop-webs-1",
+                "network_acceleration_type": "standard",
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv4": true,
+                    "ipv6_dns_record": [],
+                    "nat": true,
+                    "nat_dns_record": []
+                  }
+                ],
+                "platform_id": "standard-v1",
+                "resources": [
+                  {
+                    "core_fraction": 5,
+                    "cores": 2,
+                    "gpus": null,
+                    "memory": 1
+                  }
+                ],
+                "scheduling_policy": [
+                  {
+                    "preemptible": true
+                  }
+                ],
+                "secondary_disk": [],
+                "timeouts": null,
+                "zone": "ru-central1-b"
+              },
+              "sensitive_values": {
+                "boot_disk": [
+                  {
+                    "initialize_params": [
+                      {}
+                    ]
+                  }
+                ],
+                "filesystem": [],
+                "labels": {},
+                "local_disk": [],
+                "metadata": {},
+                "metadata_options": [],
+                "network_interface": [
+                  {
+                    "dns_record": [],
+                    "ipv6_dns_record": [],
+                    "nat_dns_record": [],
+                    "security_group_ids": []
+                  }
+                ],
+                "placement_policy": [],
+                "resources": [
+                  {}
+                ],
+                "scheduling_policy": [
+                  {}
+                ],
+                "secondary_disk": []
+              }
+            }
+          ],
+          "address": "module.test-vm"
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "yandex_vpc_network.develop",
+      "mode": "managed",
+      "type": "yandex_vpc_network",
+      "name": "develop",
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "description": null,
+          "name": "develop",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "created_at": true,
+          "default_security_group_id": true,
+          "folder_id": true,
+          "id": true,
+          "labels": true,
+          "subnet_ids": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "labels": {},
+          "subnet_ids": []
+        }
+      }
+    },
+    {
+      "address": "yandex_vpc_subnet.develop_a",
+      "mode": "managed",
+      "type": "yandex_vpc_subnet",
+      "name": "develop_a",
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "description": null,
+          "dhcp_options": [],
+          "name": "develop-ru-central1-a",
+          "route_table_id": null,
+          "timeouts": null,
+          "v4_cidr_blocks": [
+            "10.0.1.0/24"
+          ],
+          "zone": "ru-central1-a"
+        },
+        "after_unknown": {
+          "created_at": true,
+          "dhcp_options": [],
+          "folder_id": true,
+          "id": true,
+          "labels": true,
+          "network_id": true,
+          "v4_cidr_blocks": [
+            false
+          ],
+          "v6_cidr_blocks": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "dhcp_options": [],
+          "labels": {},
+          "v4_cidr_blocks": [
+            false
+          ],
+          "v6_cidr_blocks": []
+        }
+      }
+    },
+    {
+      "address": "yandex_vpc_subnet.develop_b",
+      "mode": "managed",
+      "type": "yandex_vpc_subnet",
+      "name": "develop_b",
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "description": null,
+          "dhcp_options": [],
+          "name": "develop-ru-central1-b",
+          "route_table_id": null,
+          "timeouts": null,
+          "v4_cidr_blocks": [
+            "10.0.2.0/24"
+          ],
+          "zone": "ru-central1-b"
+        },
+        "after_unknown": {
+          "created_at": true,
+          "dhcp_options": [],
+          "folder_id": true,
+          "id": true,
+          "labels": true,
+          "network_id": true,
+          "v4_cidr_blocks": [
+            false
+          ],
+          "v6_cidr_blocks": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "dhcp_options": [],
+          "labels": {},
+          "v4_cidr_blocks": [
+            false
+          ],
+          "v6_cidr_blocks": []
+        }
+      }
+    },
+    {
+      "address": "module.example-vm.yandex_compute_instance.vm[0]",
+      "module_address": "module.example-vm",
+      "mode": "managed",
+      "type": "yandex_compute_instance",
+      "name": "vm",
+      "index": 0,
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "allow_recreate": null,
+          "allow_stopping_for_update": true,
+          "boot_disk": [
+            {
+              "auto_delete": true,
+              "initialize_params": [
+                {
+                  "image_id": "fd805qs1mn3n0casp7lt",
+                  "size": 10,
+                  "type": "network-hdd"
+                }
+              ]
+            }
+          ],
+          "description": "TODO: description; {{terraform managed}}",
+          "filesystem": [],
+          "hostname": "stage-web-stage-0",
+          "labels": {
+            "env": "stage",
+            "project": "undefined"
+          },
+          "local_disk": [],
+          "metadata": {
+            "serial-port-enable": "1",
+            "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+          },
+          "name": "stage-web-stage-0",
+          "network_acceleration_type": "standard",
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv4": true,
+              "ipv6_dns_record": [],
+              "nat": true,
+              "nat_dns_record": []
+            }
+          ],
+          "platform_id": "standard-v1",
+          "resources": [
+            {
+              "core_fraction": 5,
+              "cores": 2,
+              "gpus": null,
+              "memory": 1
+            }
+          ],
+          "scheduling_policy": [
+            {
+              "preemptible": true
+            }
+          ],
+          "secondary_disk": [],
+          "timeouts": null,
+          "zone": "ru-central1-a"
+        },
+        "after_unknown": {
+          "boot_disk": [
+            {
+              "device_name": true,
+              "disk_id": true,
+              "initialize_params": [
+                {
+                  "block_size": true,
+                  "description": true,
+                  "name": true,
+                  "snapshot_id": true
+                }
+              ],
+              "mode": true
+            }
+          ],
+          "created_at": true,
+          "filesystem": [],
+          "folder_id": true,
+          "fqdn": true,
+          "gpu_cluster_id": true,
+          "id": true,
+          "labels": {},
+          "local_disk": [],
+          "maintenance_grace_period": true,
+          "maintenance_policy": true,
+          "metadata": {},
+          "metadata_options": true,
+          "network_interface": [
+            {
+              "dns_record": [],
+              "index": true,
+              "ip_address": true,
+              "ipv6": true,
+              "ipv6_address": true,
+              "ipv6_dns_record": [],
+              "mac_address": true,
+              "nat_dns_record": [],
+              "nat_ip_address": true,
+              "nat_ip_version": true,
+              "security_group_ids": true,
+              "subnet_id": true
+            }
+          ],
+          "placement_policy": true,
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": [],
+          "service_account_id": true,
+          "status": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "boot_disk": [
+            {
+              "initialize_params": [
+                {}
+              ]
+            }
+          ],
+          "filesystem": [],
+          "labels": {},
+          "local_disk": [],
+          "metadata": {},
+          "metadata_options": [],
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv6_dns_record": [],
+              "nat_dns_record": [],
+              "security_group_ids": []
+            }
+          ],
+          "placement_policy": [],
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": []
+        }
+      }
+    },
+    {
+      "address": "module.test-vm.yandex_compute_instance.vm[0]",
+      "module_address": "module.test-vm",
+      "mode": "managed",
+      "type": "yandex_compute_instance",
+      "name": "vm",
+      "index": 0,
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "allow_recreate": null,
+          "allow_stopping_for_update": true,
+          "boot_disk": [
+            {
+              "auto_delete": true,
+              "initialize_params": [
+                {
+                  "image_id": "fd805qs1mn3n0casp7lt",
+                  "size": 10,
+                  "type": "network-hdd"
+                }
+              ]
+            }
+          ],
+          "description": "TODO: description; {{terraform managed}}",
+          "filesystem": [],
+          "hostname": "develop-webs-0",
+          "labels": {
+            "owner": "i.ivanov",
+            "project": "accounting"
+          },
+          "local_disk": [],
+          "metadata": {
+            "serial-port-enable": "1",
+            "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+          },
+          "name": "develop-webs-0",
+          "network_acceleration_type": "standard",
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv4": true,
+              "ipv6_dns_record": [],
+              "nat": true,
+              "nat_dns_record": []
+            }
+          ],
+          "platform_id": "standard-v1",
+          "resources": [
+            {
+              "core_fraction": 5,
+              "cores": 2,
+              "gpus": null,
+              "memory": 1
+            }
+          ],
+          "scheduling_policy": [
+            {
+              "preemptible": true
+            }
+          ],
+          "secondary_disk": [],
+          "timeouts": null,
+          "zone": "ru-central1-a"
+        },
+        "after_unknown": {
+          "boot_disk": [
+            {
+              "device_name": true,
+              "disk_id": true,
+              "initialize_params": [
+                {
+                  "block_size": true,
+                  "description": true,
+                  "name": true,
+                  "snapshot_id": true
+                }
+              ],
+              "mode": true
+            }
+          ],
+          "created_at": true,
+          "filesystem": [],
+          "folder_id": true,
+          "fqdn": true,
+          "gpu_cluster_id": true,
+          "id": true,
+          "labels": {},
+          "local_disk": [],
+          "maintenance_grace_period": true,
+          "maintenance_policy": true,
+          "metadata": {},
+          "metadata_options": true,
+          "network_interface": [
+            {
+              "dns_record": [],
+              "index": true,
+              "ip_address": true,
+              "ipv6": true,
+              "ipv6_address": true,
+              "ipv6_dns_record": [],
+              "mac_address": true,
+              "nat_dns_record": [],
+              "nat_ip_address": true,
+              "nat_ip_version": true,
+              "security_group_ids": true,
+              "subnet_id": true
+            }
+          ],
+          "placement_policy": true,
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": [],
+          "service_account_id": true,
+          "status": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "boot_disk": [
+            {
+              "initialize_params": [
+                {}
+              ]
+            }
+          ],
+          "filesystem": [],
+          "labels": {},
+          "local_disk": [],
+          "metadata": {},
+          "metadata_options": [],
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv6_dns_record": [],
+              "nat_dns_record": [],
+              "security_group_ids": []
+            }
+          ],
+          "placement_policy": [],
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": []
+        }
+      }
+    },
+    {
+      "address": "module.test-vm.yandex_compute_instance.vm[1]",
+      "module_address": "module.test-vm",
+      "mode": "managed",
+      "type": "yandex_compute_instance",
+      "name": "vm",
+      "index": 1,
+      "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "allow_recreate": null,
+          "allow_stopping_for_update": true,
+          "boot_disk": [
+            {
+              "auto_delete": true,
+              "initialize_params": [
+                {
+                  "image_id": "fd805qs1mn3n0casp7lt",
+                  "size": 10,
+                  "type": "network-hdd"
+                }
+              ]
+            }
+          ],
+          "description": "TODO: description; {{terraform managed}}",
+          "filesystem": [],
+          "hostname": "develop-webs-1",
+          "labels": {
+            "owner": "i.ivanov",
+            "project": "accounting"
+          },
+          "local_disk": [],
+          "metadata": {
+            "serial-port-enable": "1",
+            "user-data": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n"
+          },
+          "name": "develop-webs-1",
+          "network_acceleration_type": "standard",
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv4": true,
+              "ipv6_dns_record": [],
+              "nat": true,
+              "nat_dns_record": []
+            }
+          ],
+          "platform_id": "standard-v1",
+          "resources": [
+            {
+              "core_fraction": 5,
+              "cores": 2,
+              "gpus": null,
+              "memory": 1
+            }
+          ],
+          "scheduling_policy": [
+            {
+              "preemptible": true
+            }
+          ],
+          "secondary_disk": [],
+          "timeouts": null,
+          "zone": "ru-central1-b"
+        },
+        "after_unknown": {
+          "boot_disk": [
+            {
+              "device_name": true,
+              "disk_id": true,
+              "initialize_params": [
+                {
+                  "block_size": true,
+                  "description": true,
+                  "name": true,
+                  "snapshot_id": true
+                }
+              ],
+              "mode": true
+            }
+          ],
+          "created_at": true,
+          "filesystem": [],
+          "folder_id": true,
+          "fqdn": true,
+          "gpu_cluster_id": true,
+          "id": true,
+          "labels": {},
+          "local_disk": [],
+          "maintenance_grace_period": true,
+          "maintenance_policy": true,
+          "metadata": {},
+          "metadata_options": true,
+          "network_interface": [
+            {
+              "dns_record": [],
+              "index": true,
+              "ip_address": true,
+              "ipv6": true,
+              "ipv6_address": true,
+              "ipv6_dns_record": [],
+              "mac_address": true,
+              "nat_dns_record": [],
+              "nat_ip_address": true,
+              "nat_ip_version": true,
+              "security_group_ids": true,
+              "subnet_id": true
+            }
+          ],
+          "placement_policy": true,
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": [],
+          "service_account_id": true,
+          "status": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "boot_disk": [
+            {
+              "initialize_params": [
+                {}
+              ]
+            }
+          ],
+          "filesystem": [],
+          "labels": {},
+          "local_disk": [],
+          "metadata": {},
+          "metadata_options": [],
+          "network_interface": [
+            {
+              "dns_record": [],
+              "ipv6_dns_record": [],
+              "nat_dns_record": [],
+              "security_group_ids": []
+            }
+          ],
+          "placement_policy": [],
+          "resources": [
+            {}
+          ],
+          "scheduling_policy": [
+            {}
+          ],
+          "secondary_disk": []
+        }
+      }
+    }
+  ],
+  "output_changes": {
+    "out": {
+      "actions": [
+        "create"
+      ],
+      "before": null,
+      "after": [
+        null,
+        null,
+        null
+      ],
+      "after_unknown": [
+        true,
+        true,
+        true
+      ],
+      "before_sensitive": false,
+      "after_sensitive": false
+    }
+  },
+  "prior_state": {
+    "format_version": "1.0",
+    "terraform_version": "1.8.4",
+    "values": {
+      "root_module": {
+        "resources": [
+          {
+            "address": "data.template_file.cloudinit",
+            "mode": "data",
+            "type": "template_file",
+            "name": "cloudinit",
+            "provider_name": "registry.terraform.io/gxben/template",
+            "schema_version": 0,
+            "values": {
+              "filename": null,
+              "id": "b6965ab62d9e2ccd3b899e98546d6aac02df233fa918687d0e02e41eaa014bc2",
+              "rendered": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n",
+              "template": "#cloud-config\nusers:\n  - name: ubuntu\n    groups: sudo\n    shell: /bin/bash\n    sudo: [\"ALL=(ALL) NOPASSWD:ALL\"]\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar\n      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtPnfjgdy85DXfFCEQBTA9syvs906biuj9kkVL2mjm1E+MEz1HGF/6FMNdeeWyFc3ks2qyXVSl1lVuV54fcUbo88UyQUvoj9p5U1+Y3vV+Ed7z3XN7IkHzHmJjfDaEySBT0upGQTQ2VkTJUxqEqsbJN2oAxDEPd+ltF0ecDDPrWfsnmQPTBeiaE+XUKqPg3wR8Lu8Iy20/9pf6+qjHwvFUWmneRLT6xJghpru8P/MYILo3cq3uvcWb7umHwh9aMBz6D/KNgLifTz0abSb/JrHkPjLhCec4z35qxDe9Ocsubtd4J/X3fRsh7qNYJwLsGoEmvixZCPJ3tDn8g0j7Z2tONQXkRTCRgEP4hI3z6+5MtRWQZ6E+MuhOASpAom7Ql3tFvYWsNAp/KyvXydSob3bHBe3UjnbXCIl+T9z9+GgHfEsyw+B3wuy5LknOjBu5lhn3dREIyJYcVJORwOMFAKm8mRd6ceiRjlykGrppLj26yq+y4IzZJFUEpbRvJ0b/HVE=\npackage_update: true\npackage_upgrade: false\npackages:\n  - vim\n",
+              "vars": null
+            },
+            "sensitive_values": {}
+          }
+        ],
+        "child_modules": [
+          {
+            "resources": [
+              {
+                "address": "module.example-vm.data.yandex_compute_image.my_image",
+                "mode": "data",
+                "type": "yandex_compute_image",
+                "name": "my_image",
+                "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+                "schema_version": 0,
+                "values": {
+                  "created_at": "2024-08-12T10:58:47Z",
+                  "description": "ubuntu 20.04 lts",
+                  "family": "ubuntu-2004-lts",
+                  "folder_id": "standard-images",
+                  "id": "fd805qs1mn3n0casp7lt",
+                  "image_id": "fd805qs1mn3n0casp7lt",
+                  "labels": {},
+                  "min_disk_size": 5,
+                  "name": "ubuntu-20-04-lts-v20240812",
+                  "os_type": "linux",
+                  "pooled": true,
+                  "product_ids": [
+                    "f2e8qm5m9f2r65am86s5"
+                  ],
+                  "size": 4,
+                  "status": "ready"
+                },
+                "sensitive_values": {
+                  "labels": {},
+                  "product_ids": [
+                    false
+                  ]
+                }
+              }
+            ],
+            "address": "module.example-vm"
+          },
+          {
+            "resources": [
+              {
+                "address": "module.test-vm.data.yandex_compute_image.my_image",
+                "mode": "data",
+                "type": "yandex_compute_image",
+                "name": "my_image",
+                "provider_name": "registry.terraform.io/yandex-cloud/yandex",
+                "schema_version": 0,
+                "values": {
+                  "created_at": "2024-08-12T10:58:47Z",
+                  "description": "ubuntu 20.04 lts",
+                  "family": "ubuntu-2004-lts",
+                  "folder_id": "standard-images",
+                  "id": "fd805qs1mn3n0casp7lt",
+                  "image_id": "fd805qs1mn3n0casp7lt",
+                  "labels": {},
+                  "min_disk_size": 5,
+                  "name": "ubuntu-20-04-lts-v20240812",
+                  "os_type": "linux",
+                  "pooled": true,
+                  "product_ids": [
+                    "f2e8qm5m9f2r65am86s5"
+                  ],
+                  "size": 4,
+                  "status": "ready"
+                },
+                "sensitive_values": {
+                  "labels": {},
+                  "product_ids": [
+                    false
+                  ]
+                }
+              }
+            ],
+            "address": "module.test-vm"
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "template": {
+        "name": "template",
+        "full_name": "registry.terraform.io/gxben/template",
+        "version_constraint": "2.2.0-m1"
+      },
+      "yandex": {
+        "name": "yandex",
+        "full_name": "registry.terraform.io/yandex-cloud/yandex",
+        "expressions": {
+          "cloud_id": {
+            "constant_value": "b1gn3ndpua1j6jaabf79"
+          },
+          "folder_id": {
+            "constant_value": "b1gfu61oc15cb99nqmfe"
+          },
+          "service_account_key_file": {},
+          "zone": {
+            "constant_value": "ru-central1-a"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "outputs": {
+        "out": {
+          "expression": {
+            "references": [
+              "module.test-vm.fqdn",
+              "module.test-vm",
+              "module.example-vm.fqdn",
+              "module.example-vm"
+            ]
+          }
+        }
+      },
+      "resources": [
+        {
+          "address": "yandex_vpc_network.develop",
+          "mode": "managed",
+          "type": "yandex_vpc_network",
+          "name": "develop",
+          "provider_config_key": "yandex",
+          "expressions": {
+            "name": {
+              "constant_value": "develop"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "yandex_vpc_subnet.develop_a",
+          "mode": "managed",
+          "type": "yandex_vpc_subnet",
+          "name": "develop_a",
+          "provider_config_key": "yandex",
+          "expressions": {
+            "name": {
+              "constant_value": "develop-ru-central1-a"
+            },
+            "network_id": {
+              "references": [
+                "yandex_vpc_network.develop.id",
+                "yandex_vpc_network.develop"
+              ]
+            },
+            "v4_cidr_blocks": {
+              "constant_value": [
+                "10.0.1.0/24"
+              ]
+            },
+            "zone": {
+              "constant_value": "ru-central1-a"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "yandex_vpc_subnet.develop_b",
+          "mode": "managed",
+          "type": "yandex_vpc_subnet",
+          "name": "develop_b",
+          "provider_config_key": "yandex",
+          "expressions": {
+            "name": {
+              "constant_value": "develop-ru-central1-b"
+            },
+            "network_id": {
+              "references": [
+                "yandex_vpc_network.develop.id",
+                "yandex_vpc_network.develop"
+              ]
+            },
+            "v4_cidr_blocks": {
+              "constant_value": [
+                "10.0.2.0/24"
+              ]
+            },
+            "zone": {
+              "constant_value": "ru-central1-b"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "data.template_file.cloudinit",
+          "mode": "data",
+          "type": "template_file",
+          "name": "cloudinit",
+          "provider_config_key": "template",
+          "expressions": {
+            "template": {}
+          },
+          "schema_version": 0
+        }
+      ],
+      "module_calls": {
+        "example-vm": {
+          "source": "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main",
+          "expressions": {
+            "env_name": {
+              "constant_value": "stage"
+            },
+            "image_family": {
+              "constant_value": "ubuntu-2004-lts"
+            },
+            "instance_count": {
+              "constant_value": 1
+            },
+            "instance_name": {
+              "constant_value": "web-stage"
+            },
+            "metadata": {
+              "references": [
+                "data.template_file.cloudinit.rendered",
+                "data.template_file.cloudinit"
+              ]
+            },
+            "network_id": {
+              "references": [
+                "yandex_vpc_network.develop.id",
+                "yandex_vpc_network.develop"
+              ]
+            },
+            "public_ip": {
+              "constant_value": true
+            },
+            "subnet_ids": {
+              "references": [
+                "yandex_vpc_subnet.develop_a.id",
+                "yandex_vpc_subnet.develop_a"
+              ]
+            },
+            "subnet_zones": {
+              "constant_value": [
+                "ru-central1-a"
+              ]
+            }
+          },
+          "module": {
+            "outputs": {
+              "external_ip_address": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "fqdn": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "internal_ip_address": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "labels": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "network_interface": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              }
+            },
+            "resources": [
+              {
+                "address": "yandex_compute_instance.vm",
+                "mode": "managed",
+                "type": "yandex_compute_instance",
+                "name": "vm",
+                "provider_config_key": "yandex",
+                "expressions": {
+                  "allow_stopping_for_update": {
+                    "constant_value": true
+                  },
+                  "boot_disk": [
+                    {
+                      "initialize_params": [
+                        {
+                          "image_id": {
+                            "references": [
+                              "data.yandex_compute_image.my_image.image_id",
+                              "data.yandex_compute_image.my_image"
+                            ]
+                          },
+                          "size": {
+                            "references": [
+                              "var.boot_disk_size"
+                            ]
+                          },
+                          "type": {
+                            "references": [
+                              "var.boot_disk_type"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "description": {
+                    "references": [
+                      "var.description"
+                    ]
+                  },
+                  "hostname": {
+                    "references": [
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index",
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index"
+                    ]
+                  },
+                  "labels": {
+                    "references": [
+                      "local.labels"
+                    ]
+                  },
+                  "metadata": {
+                    "references": [
+                      "var.metadata"
+                    ]
+                  },
+                  "name": {
+                    "references": [
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index",
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index"
+                    ]
+                  },
+                  "network_interface": [
+                    {
+                      "ip_address": {
+                        "references": [
+                          "var.known_internal_ip"
+                        ]
+                      },
+                      "nat": {
+                        "references": [
+                          "var.public_ip"
+                        ]
+                      },
+                      "security_group_ids": {
+                        "references": [
+                          "var.security_group_ids"
+                        ]
+                      },
+                      "subnet_id": {
+                        "references": [
+                          "var.subnet_ids",
+                          "count.index"
+                        ]
+                      }
+                    }
+                  ],
+                  "platform_id": {
+                    "references": [
+                      "var.platform"
+                    ]
+                  },
+                  "resources": [
+                    {
+                      "core_fraction": {
+                        "references": [
+                          "var.instance_core_fraction"
+                        ]
+                      },
+                      "cores": {
+                        "references": [
+                          "var.instance_cores"
+                        ]
+                      },
+                      "memory": {
+                        "references": [
+                          "var.instance_memory"
+                        ]
+                      }
+                    }
+                  ],
+                  "scheduling_policy": [
+                    {
+                      "preemptible": {
+                        "references": [
+                          "var.preemptible"
+                        ]
+                      }
+                    }
+                  ],
+                  "service_account_id": {
+                    "references": [
+                      "var.service_account_id"
+                    ]
+                  },
+                  "zone": {
+                    "references": [
+                      "var.subnet_zones",
+                      "count.index"
+                    ]
+                  }
+                },
+                "schema_version": 1,
+                "count_expression": {
+                  "references": [
+                    "var.instance_count"
+                  ]
+                }
+              },
+              {
+                "address": "data.yandex_compute_image.my_image",
+                "mode": "data",
+                "type": "yandex_compute_image",
+                "name": "my_image",
+                "provider_config_key": "yandex",
+                "expressions": {
+                  "family": {
+                    "references": [
+                      "var.image_family"
+                    ]
+                  }
+                },
+                "schema_version": 0
+              }
+            ],
+            "variables": {
+              "boot_disk_size": {
+                "default": 10
+              },
+              "boot_disk_type": {
+                "default": "network-hdd"
+              },
+              "description": {
+                "default": "TODO: description;"
+              },
+              "env_name": {
+                "default": null
+              },
+              "image_family": {
+                "default": "ubuntu-2004-lts"
+              },
+              "instance_core_fraction": {
+                "default": 5
+              },
+              "instance_cores": {
+                "default": 2
+              },
+              "instance_count": {
+                "default": 1
+              },
+              "instance_memory": {
+                "default": 1
+              },
+              "instance_name": {
+                "default": "vm"
+              },
+              "known_internal_ip": {
+                "default": ""
+              },
+              "labels": {
+                "default": {},
+                "description": "for dynamic block 'labels' "
+              },
+              "metadata": {
+                "description": "for dynamic block 'metadata' "
+              },
+              "network_id": {},
+              "platform": {
+                "default": "standard-v1",
+                "description": "Example to validate VM platform."
+              },
+              "preemptible": {
+                "default": true
+              },
+              "public_ip": {
+                "default": false
+              },
+              "security_group_ids": {
+                "default": []
+              },
+              "service_account_id": {
+                "default": null
+              },
+              "subnet_ids": {},
+              "subnet_zones": {}
+            }
+          }
+        },
+        "test-vm": {
+          "source": "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main",
+          "expressions": {
+            "env_name": {
+              "constant_value": "develop"
+            },
+            "image_family": {
+              "constant_value": "ubuntu-2004-lts"
+            },
+            "instance_count": {
+              "constant_value": 2
+            },
+            "instance_name": {
+              "constant_value": "webs"
+            },
+            "labels": {
+              "constant_value": {
+                "owner": "i.ivanov",
+                "project": "accounting"
+              }
+            },
+            "metadata": {
+              "references": [
+                "data.template_file.cloudinit.rendered",
+                "data.template_file.cloudinit"
+              ]
+            },
+            "network_id": {
+              "references": [
+                "yandex_vpc_network.develop.id",
+                "yandex_vpc_network.develop"
+              ]
+            },
+            "public_ip": {
+              "constant_value": true
+            },
+            "subnet_ids": {
+              "references": [
+                "yandex_vpc_subnet.develop_a.id",
+                "yandex_vpc_subnet.develop_a",
+                "yandex_vpc_subnet.develop_b.id",
+                "yandex_vpc_subnet.develop_b"
+              ]
+            },
+            "subnet_zones": {
+              "constant_value": [
+                "ru-central1-a",
+                "ru-central1-b"
+              ]
+            }
+          },
+          "module": {
+            "outputs": {
+              "external_ip_address": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "fqdn": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "internal_ip_address": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "labels": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              },
+              "network_interface": {
+                "expression": {
+                  "references": [
+                    "yandex_compute_instance.vm"
+                  ]
+                }
+              }
+            },
+            "resources": [
+              {
+                "address": "yandex_compute_instance.vm",
+                "mode": "managed",
+                "type": "yandex_compute_instance",
+                "name": "vm",
+                "provider_config_key": "yandex",
+                "expressions": {
+                  "allow_stopping_for_update": {
+                    "constant_value": true
+                  },
+                  "boot_disk": [
+                    {
+                      "initialize_params": [
+                        {
+                          "image_id": {
+                            "references": [
+                              "data.yandex_compute_image.my_image.image_id",
+                              "data.yandex_compute_image.my_image"
+                            ]
+                          },
+                          "size": {
+                            "references": [
+                              "var.boot_disk_size"
+                            ]
+                          },
+                          "type": {
+                            "references": [
+                              "var.boot_disk_type"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "description": {
+                    "references": [
+                      "var.description"
+                    ]
+                  },
+                  "hostname": {
+                    "references": [
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index",
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index"
+                    ]
+                  },
+                  "labels": {
+                    "references": [
+                      "local.labels"
+                    ]
+                  },
+                  "metadata": {
+                    "references": [
+                      "var.metadata"
+                    ]
+                  },
+                  "name": {
+                    "references": [
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index",
+                      "var.env_name",
+                      "var.instance_name",
+                      "count.index"
+                    ]
+                  },
+                  "network_interface": [
+                    {
+                      "ip_address": {
+                        "references": [
+                          "var.known_internal_ip"
+                        ]
+                      },
+                      "nat": {
+                        "references": [
+                          "var.public_ip"
+                        ]
+                      },
+                      "security_group_ids": {
+                        "references": [
+                          "var.security_group_ids"
+                        ]
+                      },
+                      "subnet_id": {
+                        "references": [
+                          "var.subnet_ids",
+                          "count.index"
+                        ]
+                      }
+                    }
+                  ],
+                  "platform_id": {
+                    "references": [
+                      "var.platform"
+                    ]
+                  },
+                  "resources": [
+                    {
+                      "core_fraction": {
+                        "references": [
+                          "var.instance_core_fraction"
+                        ]
+                      },
+                      "cores": {
+                        "references": [
+                          "var.instance_cores"
+                        ]
+                      },
+                      "memory": {
+                        "references": [
+                          "var.instance_memory"
+                        ]
+                      }
+                    }
+                  ],
+                  "scheduling_policy": [
+                    {
+                      "preemptible": {
+                        "references": [
+                          "var.preemptible"
+                        ]
+                      }
+                    }
+                  ],
+                  "service_account_id": {
+                    "references": [
+                      "var.service_account_id"
+                    ]
+                  },
+                  "zone": {
+                    "references": [
+                      "var.subnet_zones",
+                      "count.index"
+                    ]
+                  }
+                },
+                "schema_version": 1,
+                "count_expression": {
+                  "references": [
+                    "var.instance_count"
+                  ]
+                }
+              },
+              {
+                "address": "data.yandex_compute_image.my_image",
+                "mode": "data",
+                "type": "yandex_compute_image",
+                "name": "my_image",
+                "provider_config_key": "yandex",
+                "expressions": {
+                  "family": {
+                    "references": [
+                      "var.image_family"
+                    ]
+                  }
+                },
+                "schema_version": 0
+              }
+            ],
+            "variables": {
+              "boot_disk_size": {
+                "default": 10
+              },
+              "boot_disk_type": {
+                "default": "network-hdd"
+              },
+              "description": {
+                "default": "TODO: description;"
+              },
+              "env_name": {
+                "default": null
+              },
+              "image_family": {
+                "default": "ubuntu-2004-lts"
+              },
+              "instance_core_fraction": {
+                "default": 5
+              },
+              "instance_cores": {
+                "default": 2
+              },
+              "instance_count": {
+                "default": 1
+              },
+              "instance_memory": {
+                "default": 1
+              },
+              "instance_name": {
+                "default": "vm"
+              },
+              "known_internal_ip": {
+                "default": ""
+              },
+              "labels": {
+                "default": {},
+                "description": "for dynamic block 'labels' "
+              },
+              "metadata": {
+                "description": "for dynamic block 'metadata' "
+              },
+              "network_id": {},
+              "platform": {
+                "default": "standard-v1",
+                "description": "Example to validate VM platform."
+              },
+              "preemptible": {
+                "default": true
+              },
+              "public_ip": {
+                "default": false
+              },
+              "security_group_ids": {
+                "default": []
+              },
+              "service_account_id": {
+                "default": null
+              },
+              "subnet_ids": {},
+              "subnet_zones": {}
+            }
+          }
+        }
+      },
+      "variables": {
+        "public_key": {
+          "default": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiVcfW8Wa/DxbBNzmQcwn7hJOj7ji9eoTpFakVnY/AI webinar"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "yandex_vpc_network.develop",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "module.example-vm.data.yandex_compute_image.my_image",
+      "attribute": [
+        "image_id"
+      ]
+    },
+    {
+      "resource": "module.test-vm.data.yandex_compute_image.my_image",
+      "attribute": [
+        "image_id"
+      ]
+    },
+    {
+      "resource": "module.example-vm.yandex_compute_instance.vm",
+      "attribute": []
+    },
+    {
+      "resource": "module.test-vm.yandex_compute_instance.vm",
+      "attribute": []
+    },
+    {
+      "resource": "data.template_file.cloudinit",
+      "attribute": [
+        "rendered"
+      ]
+    },
+    {
+      "resource": "yandex_vpc_subnet.develop_a",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "yandex_vpc_subnet.develop_b",
+      "attribute": [
+        "id"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "address": {
+        "kind": "var",
+        "module": "module.example-vm",
+        "name": "platform",
+        "to_display": "module.example-vm.var.platform"
+      },
+      "status": "pass",
+      "instances": [
+        {
+          "address": {
+            "module": "module.example-vm",
+            "to_display": "module.example-vm.var.platform"
+          },
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "address": {
+        "kind": "var",
+        "module": "module.test-vm",
+        "name": "platform",
+        "to_display": "module.test-vm.var.platform"
+      },
+      "status": "pass",
+      "instances": [
+        {
+          "address": {
+            "module": "module.test-vm",
+            "to_display": "module.test-vm.var.platform"
+          },
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "timestamp": "2024-08-17T09:27:11Z",
+  "applyable": true,
+  "complete": true,
+  "errored": false
+}
